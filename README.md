@@ -2,11 +2,14 @@ Presenting my dotfiles for neovim. I made a few small scripts to reduce some tim
 
 # How to use?
 - Get neovim from your package manager/obtain binary
+- Place this whole repo in `~/.config/nvim/` folder. (So the paths would read like `.config/nvim/lua/...`.)
 - follow https://github.com/wbthomason/packer.nvim#quickstart to install Packer (a package manager for neovim plugins)
 - open an nvim instance, in NORMAL mode type `:PackerSync`. Wait for some time. After it finished type `:COQdeps`. This will install initiliaze the autocompletions stuff.
+- Lastly `alias vim=nvim`
 
 I am running it on a WSL (ubuntu/One half dark) instance (there is a small override for a small colorscheme, but that's your choice how to set it up, if you want to look for anything installed by PackerSync, go to `~/.local/share/nvim/site/...`).
 
 Here is a photu:
 ![Demonstration image](current-looks.png)
 
+More on aesthetics: The screenshot uses Fire-Code font. It has ligatures (google).
