@@ -37,3 +37,4 @@ vim.g.copilot_filetypes = {
 }
 
 require('colorizer').setup()
+vim.g.copilot_enabled = true
