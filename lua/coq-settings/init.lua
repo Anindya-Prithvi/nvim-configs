@@ -1,2 +1,2 @@
 require('coq')
-vim.cmd[[COQnow]]
+vim.cmd[[COQnow --shut-up]]

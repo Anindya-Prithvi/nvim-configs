@@ -1,6 +1,5 @@
 local set = vim.opt
 
-require('colorizer').setup()
 set.expandtab = true
 set.number = true
 set.shiftwidth = 4
@@ -14,3 +13,4 @@ set.fileencoding = 'utf-8'
 set.termguicolors = true
 set.cursorline = true
 
+require('colorizer').setup()
