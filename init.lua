@@ -1,5 +1,5 @@
 require('settings')
 require('packer-config')
-require('colorschemes-config')
+require('colorschemes-config.tokyonight')
 require('mappings')
 require('coq-settings')
