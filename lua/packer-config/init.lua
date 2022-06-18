@@ -3,4 +3,6 @@ return require('packer').startup(function()
     use 'EdenEast/nightfox.nvim'
     use 'folke/tokyonight.nvim'
     use 'norcalli/nvim-colorizer.lua'
+    use {'ms-jpq/coq_nvim', branch = 'coq'}
+    use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
 end)
