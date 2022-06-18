@@ -5,4 +5,5 @@ return require('packer').startup(function()
     use 'norcalli/nvim-colorizer.lua'
     use {'ms-jpq/coq_nvim', branch = 'coq'}
     use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
+    use 'github/copilot.vim'
 end)

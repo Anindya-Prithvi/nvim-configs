@@ -12,4 +12,6 @@ I am running it on a WSL (ubuntu/One half dark) instance (there is a small overr
 Here is a photu:
 ![Demonstration image](current-looks.png)
 
-More on aesthetics: The screenshot uses Fire-Code font. It has ligatures (google).
+More on aesthetics: The screenshot uses Fire-Code font. It has ligatures (google).  
+**Update:** I added copilot xD. (To enable use `:Copilot setup` followed by `:Copilot enable`). Personal note, copilot is incredibly dumb for readme.
+
