@@ -18,6 +18,7 @@ vim.g.copilot_filetypes = {
     ["*"] = false,
     ["markdown"] = true,
     ["c++"] = true,
+    ["cpp"] = true,
     ["python"] = true,
     ["rust"] = true,
     ["c"] = true,

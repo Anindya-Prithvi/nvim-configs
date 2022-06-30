@@ -2,16 +2,18 @@ Presenting my dotfiles for neovim. I made a few small scripts to reduce some tim
 
 # How to use?
 - Get neovim from your package manager/obtain binary
-- Place this whole repo in `~/.config/nvim/` folder. (So the paths would read like `.config/nvim/lua/...`.)
+- Place this whole repo in `~/.config/nvim/` folder. (So the paths would read like `~/.config/nvim/lua/...`.)
 - follow https://github.com/wbthomason/packer.nvim#quickstart to install Packer (a package manager for neovim plugins)
-- open an nvim instance, in NORMAL mode type `:PackerSync`. Wait for some time. After it finished type `:COQdeps`. This will install initiliaze the autocompletions stuff.
-- Lastly `alias vim=nvim`
+- Open `~/.config/nvim/lua/packer-config/init.lua` using `nvim`. Run `:luafile %` in NORMAL mode. Now type `:PackerSync`. Wait for some time. After it's finished exit nvim.
+- Now install `python3-venv` using your package manager like apt, pacman (OR just refer to github.com/ms-jpq/coq_nvim)
+- Finally open `~/.config/nvim/lua/packer-config/init.lua` again and run `:PackerSync` followed by `:COQdeps`. This will install buffer based autocompletions (to install LSP which might slow the setup, look at their github page).
+- Now set-up Copilot using `:Copilot setup`. It'll just make you authenitcate your copilot instance.
+- Lastly `alias vim=nvim` in your .bashrc/.zshrc/etc. (most important)
 
 I am running it on a WSL (ubuntu/One half dark) instance (there is a small override for a small colorscheme, but that's your choice how to set it up, if you want to look for anything installed by PackerSync, go to `~/.local/share/nvim/site/...`).
 
 Here is a photu:
 ![Demonstration image](current-looks.png)
 
-More on aesthetics: The screenshot uses Fire-Code font. It has ligatures (google).  
-**Update:** I added copilot xD. (To enable use `:Copilot setup` followed by `:Copilot enable`). Personal note, copilot is incredibly dumb for readme.
+More on aesthetics: The screenshot uses Fire-Code font on Windows Terminal (win 11). It has ligatures (google).  
 
