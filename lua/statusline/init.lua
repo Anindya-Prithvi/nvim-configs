@@ -49,12 +49,31 @@ function Statusline.short()
   return "%#StatusLineNC#   NvimTree"
 end
 
-vim.api.nvim_exec([[
-  augroup Statusline
-  au!
-  au WinEnter,BufEnter * setlocal statusline=%!v:lua.Statusline.active()
-  au WinLeave,BufLeave * setlocal statusline=%!v:lua.Statusline.inactive()
-  au WinEnter,BufEnter,FileType NvimTree setlocal statusline=%!v:lua.Statusline.short()
-  augroup END
-]], false)
+vim.api.nvim_create_augroup("Statusline", {clear = true})
 
+vim.api.nvim_create_autocmd({"WinEnter", "BufEnter"}, {
+    group = "Statusline",
+    pattern = "*", 
+    callback = function()
+      vim.opt_local.statusline = Statusline.active()
+  end
+  }
+)
+
+vim.api.nvim_create_autocmd({"WinLeave", "BufLeave"}, {
+    group = "Statusline",
+    pattern = "*", 
+    callback = function()
+      vim.opt_local.statusline = Statusline.inactive()
+  end
+  }
+)
+
+vim.api.nvim_create_autocmd({"WinEnter", "BufEnter"}, {
+    group = "Statusline",
+    pattern = "*", 
+    callback = function()
+      vim.opt_local.statusline = Statusline.short()
+  end
+  }
+)
