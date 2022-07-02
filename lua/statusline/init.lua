@@ -68,10 +68,10 @@ vim.api.nvim_create_autocmd({"WinLeave", "BufLeave"}, {
   end
   }
 )
-
+-- WinEnter,BufEnter,FileType NvimTree
 vim.api.nvim_create_autocmd({"WinEnter", "BufEnter"}, {
     group = "Statusline",
-    pattern = "*", 
+    pattern = "NvimTree", 
     callback = function()
       vim.opt_local.statusline = Statusline.short()
   end
