@@ -1,5 +1,11 @@
 Presenting my dotfiles for neovim. I made a few small scripts to reduce some time in CP. Not that I solve all ABCDEF in div1 but while using VSCode (another pog editor) the language services, completions, and a whole new electron window seems tooooooo bloaty. So, I decided to write my own bloat (jk). This configuration is stripped off from tree-sitters so do not expect to use it like an IDE out of the box. You might edit it for yourself.
 
+# Prerequisites
+- python3-venv (for autocompletions)
+- Copilot license (for ai suggestions)
+- [neovim](https://neovim.io/)
+- astyle (for code formatting)
+
 # How to use?
 - Get neovim from your package manager/obtain binary
 - Place this whole repo in `~/.config/nvim/` folder. (So the paths would read like `~/.config/nvim/lua/...`.)

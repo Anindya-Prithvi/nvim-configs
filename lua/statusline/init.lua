@@ -49,9 +49,10 @@ function Statusline.short()
   return "%#StatusLineNC#   NvimTree"
 end
 
+local autocmd = vim.api.nvim_create_autocmd
 vim.api.nvim_create_augroup("Statusline", {clear = true})
 
-vim.api.nvim_create_autocmd({"WinEnter", "BufEnter"}, {
+autocmd({"WinEnter", "BufEnter"}, {
     group = "Statusline",
     pattern = "*", 
     callback = function()
@@ -60,7 +61,7 @@ vim.api.nvim_create_autocmd({"WinEnter", "BufEnter"}, {
   }
 )
 
-vim.api.nvim_create_autocmd({"WinLeave", "BufLeave"}, {
+autocmd({"WinLeave", "BufLeave"}, {
     group = "Statusline",
     pattern = "*", 
     callback = function()
@@ -69,7 +70,7 @@ vim.api.nvim_create_autocmd({"WinLeave", "BufLeave"}, {
   }
 )
 -- WinEnter,BufEnter,FileType NvimTree
-vim.api.nvim_create_autocmd({"WinEnter", "BufEnter"}, {
+autocmd({"WinEnter", "BufEnter"}, {
     group = "Statusline",
     pattern = "NvimTree", 
     callback = function()

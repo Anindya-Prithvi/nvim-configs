@@ -39,3 +39,6 @@ vim.g.copilot_filetypes = {
 
 require('colorizer').setup()
 vim.g.copilot_enabled = true
+
+
+vim.api.nvim_create_autocmd({"BufWrite"}, {pattern = "*.cpp", command = ":%!astyle -v"})
