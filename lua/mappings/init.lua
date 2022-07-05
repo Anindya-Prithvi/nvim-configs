@@ -16,15 +16,10 @@ local function cppfuns()
     buffermap("i", "<C-_>", "<Esc>^i// <Esc><S-A>")
 end
 
--- vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
---                      pattern = {"*.c", "*.h"},
---                      command = "echo 'Entering a C or C++ file'",
---                    })
-
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {pattern = "*.cpp", callback = cppfuns})
 
 map("n", "q", ":q <CR>")
 map("i", "<Home>", "<Esc>0wi")
-map("i", "{", "{}<Esc>ha")
+map("i", "{<CR>", "{<CR>}<Esc>O")
 map("i", "(", "()<Esc>ha")
 map("i", "[", "[]<Esc>ha")
