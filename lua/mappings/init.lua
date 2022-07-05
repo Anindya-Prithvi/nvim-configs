@@ -25,4 +25,6 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {pattern = "*.cpp", cal
 
 map("n", "q", ":q <CR>")
 map("i", "<Home>", "<Esc>0wi")
-
+map("i", "{", "{}<Esc>ha")
+map("i", "(", "()<Esc>ha")
+map("i", "[", "[]<Esc>ha")
