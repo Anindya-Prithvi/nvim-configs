@@ -1,0 +1,38 @@
+#!/bin/bash
+if [ $# -eq 0 ]
+then
+    echo 'NOTALLOWED: NEED FILENAME'
+    echo "PROCEED?(y/n)"
+    read -n1 proceed
+    if [[ $proceed == 'y' ]]
+    then 
+        echo "Enter filename w/o extension"
+        read filename
+        echo $filename
+    else
+        exit
+    fi
+else
+    filename=$1
+fi
+if [ -e $filename.cpp ]
+then
+    echo "File exists. Would you like to replace it?(y/N)"
+    read -n1 replacebool
+    if [[ $replacebool == 'y' ]]
+    then
+        cp /mnt/c/Users/Andy/Desktop/tryingwsl/bin/rawtemplate ./$filename.cpp
+        chmod 644 ./$filename.cpp
+        nvim +"norm 27Gztm1" +"norm $" +"startinsert!" ./$filename.cpp
+    else
+        echo "Starting in new file"
+        rand=$RANDOM
+        cp /mnt/c/Users/Andy/Desktop/tryingwsl/bin/rawtemplate ./$filename$rand.cpp
+        chmod 644 ./$filename$rand.cpp
+        nvim +"norm 27Gztm1" +"norm $" +"startinsert!" ./$filename$rand.cpp
+    fi
+else
+    cp /mnt/c/Users/Andy/Desktop/tryingwsl/bin/rawtemplate ./$filename.cpp
+    chmod 644 ./$filename.cpp
+    nvim +"norm 27Gztm1" +"norm $" +"startinsert!" ./$filename.cpp
+fi

@@ -1,0 +1,34 @@
+#!/bin/bash
+if [ $# -eq 0 ]
+then
+    echo 'NOTALLOWED: NEED FILENAME'
+    echo "PROCEED?(y/n)"
+    read -n1 proceed
+    if [[ $proceed == 'y' ]]
+    then 
+        echo "Enter filename w/o extension"
+        read filename
+        echo $filename
+    else
+        exit
+    fi
+else
+    filename=$1
+fi
+
+echo CLEARINGOUTPUT
+clear
+echo COMPILING
+rustc ./$filename.rs
+echo COMPILED
+echo EXECUTING
+./$filename
+echo DELETING EXECUTABLE
+rm ./$filename
+echo "SATISFIED?(y/n)"
+read -n1 agr
+if [[ $agr == 'y' ]]
+then 
+    cat $filename.rs | clip.exe
+    echo COPIED
+fi
