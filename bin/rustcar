@@ -18,6 +18,8 @@ fi
 
 echo CLEARINGOUTPUT
 clear
+echo FORMATTING
+rustfmt ./$filename.rs
 echo COMPILING
 rustc ./$filename.rs
 echo COMPILED
