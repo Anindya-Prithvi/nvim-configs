@@ -1,10 +1,10 @@
-Presenting my dotfiles for neovim. I made a few small scripts to reduce some time in CP. Not that I solve all ABCDEF in div1 but while using VSCode (another pog editor) the language services, completions, and a whole new electron window seems tooooooo bloaty. So, I decided to write my own bloat (jk). This configuration is stripped off from tree-sitters so do not expect to use it like an IDE out of the box. You might edit it for yourself.
+Presenting my dotfiles for neovim. I made a few small scripts to reduce some time in CP. Not that I solve all ABCDEF in div1 but while using VSCode (another pog editor) the language services, completions, and a whole new electron window seems tooooooo bloaty. So, I decided to write my own bloat (jk). This configuration is becoming IDE like everyday. You might edit it for yourself anyways.
 
 # Prerequisites
 - python3-venv (for autocompletions)
 - Copilot license (for ai suggestions)
 - [neovim](https://neovim.io/)
-- astyle (for code formatting)
+- astyle (for code formatting | not recommended)
 
 # How to use?
 - Get neovim from your package manager/obtain binary
@@ -16,6 +16,7 @@ Presenting my dotfiles for neovim. I made a few small scripts to reduce some tim
 - Now set-up Copilot using `:Copilot setup`. It'll just make you authenitcate your copilot instance.
 - It is recommended to add `~.config/nvim/bin` to your PATH. (This will allow you to use `gen`, compile and run, and other productivity scripts). (If you are a competitive programmer -cpp, you should update file named `rawtemplate` in that folder)
 - Lastly `alias vim=nvim` in your .bashrc/.zshrc/etc. (most important)
+- use `Ctrl+f` to open the file explorer on your left! (VSCode lol). Then, use `Ctrl+w` followed by `w` to switch between all windows you opened. Refer to `msjpq/chadtree` for more (or use `:CHADhelp keybind`).
 
 I am running it on a WSL (ubuntu/One half dark) instance (there is a small override for a small colorscheme, but that's your choice how to set it up, if you want to look for anything installed by PackerSync, go to `~/.local/share/nvim/site/...`).
 

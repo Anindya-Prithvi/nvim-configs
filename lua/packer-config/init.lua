@@ -6,4 +6,5 @@ return require('packer').startup(function()
     use {'ms-jpq/coq_nvim', branch = 'coq'}
     use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
     use 'github/copilot.vim'
+    use {'ms-jpq/chadtree', branch = 'chad'}
 end)
