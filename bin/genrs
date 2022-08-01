@@ -23,16 +23,16 @@ then
     then
         cp /home/andy/.config/nvim/bin/rawtemplate_rs ./$filename.rs
         chmod 644 ./$filename.rs
-        nvim +"norm 32Gztm1" +"norm $" +"startinsert!" ./$filename.rs
+        nvim +"norm 35Gztm1" +"norm $" +"startinsert!" ./$filename.rs
     else
         echo "Starting in new file"
         rand=$RANDOM
         cp /home/andy/.config/nvim/bin/rawtemplate_rs ./$filename$rand.rs
         chmod 644 ./$filename$rand.rs
-        nvim +"norm 32Gztm1" +"norm $" +"startinsert!" ./$filename$rand.rs
+        nvim +"norm 35Gztm1" +"norm $" +"startinsert!" ./$filename$rand.rs
     fi
 else
     cp /home/andy/.config/nvim/bin/rawtemplate_rs ./$filename.rs
     chmod 644 ./$filename.rs
-    nvim +"norm 32Gztm1" +"norm $" +"startinsert!" ./$filename.rs
+    nvim +"norm 35Gztm1" +"norm $" +"startinsert!" ./$filename.rs
 fi
