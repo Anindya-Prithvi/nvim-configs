@@ -16,15 +16,20 @@ else
     filename=$1
 fi
 
+if [[ $filename == *"/"* ]]; then
+    filename="$filename"
+else 
+    filename="./$filename"
+fi
 echo CLEARINGOUTPUT
 clear
 echo COMPILING
-g++ ./$filename.cpp -std=c++17 -o ./$filename 
+g++ $filename.cpp -std=c++17 -o $filename 
 echo COMPILED
 echo EXECUTING
-./$filename
+$filename
 echo DELETING EXECUTABLE
-rm ./$filename
+rm $filename
 echo "SATISFIED?(y/n)"
 read -n1 agr
 if [[ $agr == 'y' ]]

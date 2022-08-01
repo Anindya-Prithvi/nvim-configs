@@ -1,0 +1,38 @@
+#!/bin/bash
+if [ $# -eq 0 ]
+then
+    echo 'NOTALLOWED: NEED FILENAME'
+    echo "PROCEED?(y/n)"
+    read -n1 proceed
+    if [[ $proceed == 'y' ]]
+    then 
+        echo "Enter filename w/o extension"
+        read filename
+        echo $filename
+    else
+        exit
+    fi
+else
+    filename=$1
+fi
+if [ -e $filename.rs ]
+then
+    echo "File exists. Would you like to replace it?(y/N)"
+    read -n1 replacebool
+    if [[ $replacebool == 'y' ]]
+    then
+        cp /home/andy/.config/nvim/bin/rawtemplate_rs ./$filename.rs
+        chmod 644 ./$filename.rs
+        nvim +"norm 32Gztm1" +"norm $" +"startinsert!" ./$filename.rs
+    else
+        echo "Starting in new file"
+        rand=$RANDOM
+        cp /home/andy/.config/nvim/bin/rawtemplate_rs ./$filename$rand.rs
+        chmod 644 ./$filename$rand.rs
+        nvim +"norm 32Gztm1" +"norm $" +"startinsert!" ./$filename$rand.rs
+    fi
+else
+    cp /home/andy/.config/nvim/bin/rawtemplate_rs ./$filename.rs
+    chmod 644 ./$filename.rs
+    nvim +"norm 32Gztm1" +"norm $" +"startinsert!" ./$filename.rs
+fi

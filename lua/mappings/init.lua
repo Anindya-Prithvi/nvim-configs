@@ -14,11 +14,15 @@ end
 local function cppfuns() 
     buffermap("n", "cpp", ":w<CR>:te bash ~/.config/nvim/bin/cppcar %:r <CR>i")
     buffermap("i", "<C-_>", "<Esc>^i// <Esc><S-A>")
+    buffermap("n", "ff", ":g /^#define TESTS.*/d<CR>")
+    buffermap("n", "tt", "gg0i#define TESTS<CR><Esc>")
 end
 
 local function rustfuns() 
     buffermap("n", "rr", ":w<CR>:te bash ~/.config/nvim/bin/rustcar %:r <CR>i")
     buffermap("i", "<C-_>", "<Esc>^i// <Esc><S-A>")
+    buffermap("n", "ff", ":%s/const TEST: bool = .*/const TEST: bool = false;<CR>")
+    buffermap("n", "tt", ":%s/const TEST: bool = .*/const TEST: bool = true;<CR>")
 end
 
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {pattern = "*.cpp", callback = cppfuns})

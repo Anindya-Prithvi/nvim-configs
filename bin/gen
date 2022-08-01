@@ -21,7 +21,7 @@ then
     read -n1 replacebool
     if [[ $replacebool == 'y' ]]
     then
-        cp /mnt/c/Users/Andy/Desktop/tryingwsl/bin/rawtemplate ./$filename.cpp
+        cp /home/andy/.config/nvim/bin/rawtemplate ./$filename.cpp
         chmod 644 ./$filename.cpp
         nvim +"norm 27Gztm1" +"norm $" +"startinsert!" ./$filename.cpp
     else
