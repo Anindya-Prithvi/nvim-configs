@@ -17,6 +17,7 @@ Presenting my dotfiles for neovim. I made a few small scripts to reduce some tim
 - It is recommended to add `~.config/nvim/bin` to your PATH. (This will allow you to use `gen`, compile and run, and other productivity scripts). (If you are a competitive programmer -cpp, you should update file named `rawtemplate` in that folder)
 - Lastly `alias vim=nvim` in your .bashrc/.zshrc/etc. (most important)
 - use `Ctrl+f` to open the file explorer on your left! (VSCode lol). Then, use `Ctrl+w` followed by `w` to switch between all windows you opened. Refer to `msjpq/chadtree` for more (or use `:CHADhelp keybind`).
+- (Optional) Update rawtemplates provided in `/bin` folder.
 
 I am running it on a WSL (ubuntu/One half dark) instance (there is a small override for a small colorscheme, but that's your choice how to set it up, if you want to look for anything installed by PackerSync, go to `~/.local/share/nvim/site/...`).
 
