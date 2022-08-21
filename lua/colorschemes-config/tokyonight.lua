@@ -21,4 +21,5 @@ hi NvimTreeNormal guibg=none ctermbg=none
 hi NvimTreeNormalNC guibg=none ctermbg=none
 hi LineNr guifg=#9960dd
 hi CursorLineNr guifg=#dd60dd
+hi CopilotSuggestion guifg=#3fada8 ctermfg=8
 ]]

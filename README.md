@@ -4,7 +4,7 @@ Presenting my dotfiles for neovim. I made a few small scripts to reduce some tim
 - python3-venv (for autocompletions)
 - Copilot license (for ai suggestions)
 - [neovim](https://neovim.io/)
-- astyle (for code formatting | not recommended)
+- astyle (for code formatting/ may use something else but change appropriately in lua/settings/init.lua)
 
 # How to use?
 - Get neovim from your package manager/obtain binary
@@ -15,14 +15,16 @@ Presenting my dotfiles for neovim. I made a few small scripts to reduce some tim
 - Finally open `~/.config/nvim/lua/packer-config/init.lua` again and run `:PackerSync` followed by `:COQdeps`. This will install buffer based autocompletions (to install LSP which might slow the setup, look at their github page).
 - Now set-up Copilot using `:Copilot setup`. It'll just make you authenitcate your copilot instance.
 - It is recommended to add `~.config/nvim/bin` to your PATH. (This will allow you to use `gen`, compile and run, and other productivity scripts). (If you are a competitive programmer -cpp, you should update file named `rawtemplate` in that folder)
-- Lastly `alias vim=nvim` in your .bashrc/.zshrc/etc. (most important)
-- use `Ctrl+f` to open the file explorer on your left! (VSCode lol). Then, use `Ctrl+w` followed by `w` to switch between all windows you opened. Refer to `msjpq/chadtree` for more (or use `:CHADhelp keybind`).
-- (Optional) Update rawtemplates provided in `/bin` folder.
+- Lastly `alias vim=nvim` in your .bashrc or .zshrc etc. (most important)
+- use `Ctrl+f` to open the file explorer on your left! (VSCode lol). 
+- (Optional) Update rawtemplates provided in `/bin` folder to match your cp templates.
 
-I am running it on a WSL (ubuntu/One half dark) instance (there is a small override for a small colorscheme, but that's your choice how to set it up, if you want to look for anything installed by PackerSync, go to `~/.local/share/nvim/site/...`).
+I am running it on a WSL (ubuntu/One half dark) instance with acrylic.
 
-Here is a photu:
+Here is a photo of my setup:
 ![Demonstration image](current-looks.png)
 
-More on aesthetics: The screenshot uses Fire-Code font on Windows Terminal (win 11). It has ligatures (google).  
+More on aesthetics: The screenshot uses FiraCode Nerd Font on Windows Terminal (win 11).  
+
+# VIM supremacy!
 
