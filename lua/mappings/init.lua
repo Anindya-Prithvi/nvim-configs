@@ -16,6 +16,7 @@ local function cppfuns()
     buffermap("i", "<C-_>", "<Esc>^i// <Esc><S-A>")
     buffermap("n", "ff", ":g /^#define TESTS.*/d<CR>")
     buffermap("n", "tt", "gg0i#define TESTS<CR><Esc>")
+    buffermap("n", "<C-b>", ":!mkdir -p build && cd build && cmake .. && make<CR>")
 end
 
 local function rustfuns() 
@@ -25,10 +26,10 @@ local function rustfuns()
     buffermap("n", "tt", ":%s/const TEST: bool = .*/const TEST: bool = true;<CR>")
 end
 
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {pattern = "*.cpp", callback = cppfuns})
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {pattern = {"*.cpp", "*.hpp", "*.c", "*.h"}, callback = cppfuns})
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {pattern = "*.rs", callback = rustfuns})
 
-map("n", "q", ":q <CR>")
+-- map("n", "q", ":q <CR>")
 map("i", "<Home>", "<Esc>0wi")
 map("i", "{<CR>", "{<CR>}<Esc>O")
 map("i", "(", "()<Esc>ha")

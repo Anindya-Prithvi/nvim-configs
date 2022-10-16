@@ -14,6 +14,8 @@ set.cursorline = true
 
 vim.g.copilot_no_tab_map = true
 vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', {silent = true, expr = true})
+vim.api.nvim_set_keymap("n", "<C-b>", '!mkdir -p build && cd build && cmake .. && make<CR>', {silent = true, expr = true})
+
 
 vim.g.copilot_filetypes = {
     ["*"] = false,
@@ -40,5 +42,5 @@ vim.g.copilot_filetypes = {
 
 require('colorizer').setup()
 vim.g.copilot_enabled = true
-
-vim.api.nvim_create_autocmd({"BufWrite"}, {pattern = "*.cpp", command = ":%!astyle -v"})
+set.wrap = false
+-- vim.api.nvim_create_autocmd({"BufWrite"}, {pattern = "*.cpp", command = ":%!astyle -v"})
