@@ -18,7 +18,7 @@ vim.api.nvim_set_keymap("n", "<C-b>", '!mkdir -p build && cd build && cmake .. &
 
 
 vim.g.copilot_filetypes = {
-    ["*"] = false,
+    ["*"] = true,
     ["markdown"] = true,
     ["c++"] = true,
     ["cpp"] = true,

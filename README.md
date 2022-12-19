@@ -24,7 +24,7 @@ I am running it on a WSL (ubuntu/One half dark) instance with acrylic.
 Here is a photo of my setup:
 ![Demonstration image](current-looks.png)
 
-More on aesthetics: The screenshot uses FiraCode Nerd Font on Windows Terminal (win 11).  
+More on aesthetics: The screenshot uses FiraCode Nerd Font on Windows Terminal (win 11) with acrylics on 💅.  
 
 # VIM supremacy!
 
