@@ -15,7 +15,7 @@ local function cppfuns()
     buffermap("n", "cpp", ":w<CR>:te bash ~/.config/nvim/bin/cppcar %:r <CR>i")
     buffermap("i", "<C-_>", "<Esc>^i// <Esc><S-A>")
     buffermap("n", "ff", ":g /^#define TESTS.*/d<CR>")
-    buffermap("n", "tt", "gg0i#define TESTS<CR><Esc>")
+    buffermap("n", "tt", "m1gg0i#define TESTS<CR><Esc>`1")
     buffermap("n", "<C-b>", ":!mkdir -p build && cd build && cmake .. && make<CR>")
 end
 
