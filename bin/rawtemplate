@@ -4,6 +4,12 @@ using namespace std;
 #define all(v) v.begin(), v.end()
 #define endl "\n"
 
+#ifndef ONLINE_JUDGE
+    #define DBG if(1)
+#else
+    #define DBG if(0)
+#endif
+
 void IN();
 template <typename Head, typename... Tail>
 void IN(Head &head, Tail &...tail) {

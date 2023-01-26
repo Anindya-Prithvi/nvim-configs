@@ -23,16 +23,16 @@ then
     then
         cp ~/.config/nvim/bin/rawtemplate ./$filename.cpp
         chmod 644 ./$filename.cpp
-        nvim +"norm 27Gztm1" +"norm $" +"startinsert!" ./$filename.cpp
+        nvim +"norm 33Gztm1" +"norm $" +"startinsert!" ./$filename.cpp
     else
         echo "Starting in new file"
         rand=$RANDOM
         cp ~/.config/nvim/bin/rawtemplate ./$filename$rand.cpp
         chmod 644 ./$filename$rand.cpp
-        nvim +"norm 27Gztm1" +"norm $" +"startinsert!" ./$filename$rand.cpp
+        nvim +"norm 33Gztm1" +"norm $" +"startinsert!" ./$filename$rand.cpp
     fi
 else
     cp ~/.config/nvim/bin/rawtemplate ./$filename.cpp
     chmod 644 ./$filename.cpp
-    nvim +"norm 27Gztm1" +"norm $" +"startinsert!" ./$filename.cpp
+    nvim +"norm 33Gztm1" +"norm $" +"startinsert!" ./$filename.cpp
 fi
