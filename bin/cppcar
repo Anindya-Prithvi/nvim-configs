@@ -24,7 +24,7 @@ fi
 echo CLEARINGOUTPUT
 clear
 echo COMPILING
-g++ $filename.cpp -std=c++17 -o $filename 
+g++ $filename.cpp -std=c++20 -o $filename 
 echo COMPILED
 echo EXECUTING
 $filename
