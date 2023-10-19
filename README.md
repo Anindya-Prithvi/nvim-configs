@@ -1,3 +1,5 @@
+[DEPRECATED]: Not crossplatform enough. Line endings shouldn't be a problem in 2023; https://github.com/neovim/neovim/issues/11205 
+
 Presenting my dotfiles for neovim. I made a few small scripts to reduce some time in CP. Not that I solve all ABCDEF in div1 but while using VSCode (another pog editor) the language services, completions, and a whole new electron window seems tooooooo bloaty. So, I decided to write my own bloat (jk). This configuration is becoming IDE like everyday. You might edit it for yourself anyways.
 
 # Prerequisites
